@@ -1,5 +1,6 @@
 # https://github.com/KatieGrays/lab10-KG-AE.git
-# Katie Gray & Ariella Efraim
+# Partner 1: Katie Gray 
+# Partner 2: Ariella Efraim
 
 """
 calculator.py
