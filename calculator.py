@@ -26,19 +26,20 @@ def div(a, b):
     return a / b
 
 def log(a, b):
-    math.log(a, b)
-# Make value error
+    return math.log(a, b)
+
 def logarithm(a, b):
-    math.log(a, b)
+    if a <= 0 or b <= 0:
+        raise ValueError("Logarithm arguments must be positive")
+    return math.log(a, b)
 
 def exp(a, b):
     return a ** b
+
 def square_root(a):
-    try:
-       return a ** 0.5
-    except ValueError as e:
-        print(f"Error: {e}")
+    if a < 0:
+        return None
+    return a ** 0.5
 
 def hypotenuse(a, b):
-    math.hypot(a, b)
-
+    return math.hypot(a, b)
