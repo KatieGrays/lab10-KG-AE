@@ -65,7 +65,6 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
     ##########################
 
-# Hi
 # Do not touch this
 if __name__ == "__main__":
     unittest.main()
