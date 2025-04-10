@@ -1,14 +1,15 @@
-import math
 """
 calculator.py
 - Defines functions used to create a simple calculator
 
 One function per operation, in order.
 """
+import math
+
+
 # First example
 def add(a, b):
     return a + b
-    pass
 
 def sub(a, b):
     return a - b
@@ -16,26 +17,28 @@ def sub(a, b):
 def mul(a, b):
     return a * b
 
+# Make DivisionError
 def div(a, b):
-    return b / a # raise ZeroDivisionError if a == 0
+    return a / b
+try:
+    a = 10
+    b = 0
+    result = a/b
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
 
 def log(a, b):
-    return math.log(a,b)
-    # use math library + raise ValueError
-def square_root(a):
-    try:
-        return math.sqrt(a)
-    except ValueError as e:
-        if a < 0:
-            print(f'Error: {e}')
-
-def hypotenuse(a,b):
-    return math.hypot(a,b)
-
-
-
+    math.log(a, b)
+# Make value error
 
 def exp(a, b):
-    return a**b
+    return a ** b
+def square_root(a):
+    try:
+       return a ** 0.5
+    except ValueError as e:
+        print(f"Error: {e}")
 
+def hypotenuse(a, b):
+    math.hypot(a, b)
 
