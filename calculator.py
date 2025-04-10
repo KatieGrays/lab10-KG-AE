@@ -22,6 +22,18 @@ def div(a, b):
 def log(a, b):
     return math.log(a,b)
     # use math library + raise ValueError
+def square_root(a):
+    try:
+        return math.sqrt(a)
+    except ValueError as e:
+        if a < 0:
+            print(f'Error: {e}')
+
+def hypotenuse(a,b):
+    return math.hypot(a,b)
+
+
+
 
 def exp(a, b):
     return a**b
