@@ -1,3 +1,4 @@
+import math
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -25,6 +26,12 @@ except ZeroDivisionError as e:
     print(f"Error: {e}")
 
 def log(a, b):
+    if a <= 0 or a == 1:
+        raise ValueError(f"Error: {a}")
+    if b <= 0:
+        raise ValueError(f"Error: {b}")
+
+    return math.log(a, b)
 # Make value error
 
 def exp(a, b):
