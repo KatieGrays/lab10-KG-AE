@@ -1,3 +1,6 @@
+# https://github.com/KatieGrays/lab10-KG-AE.git
+# Katie Gray & Ariella Efraim
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -18,17 +21,15 @@ def mul(a, b):
 
 # Make DivisionError
 def div(a, b):
+    if b == 0:
+        raise ZeroDivisionError
     return a / b
-try:
-    a = 10
-    b = 0
-    result = a/b
-except ZeroDivisionError as e:
-    print(f"Error: {e}")
 
 def log(a, b):
     math.log(a, b)
 # Make value error
+def logarithm(a, b):
+    math.log(a, b)
 
 def exp(a, b):
     return a ** b
